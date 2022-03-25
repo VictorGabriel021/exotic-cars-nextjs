@@ -1,11 +1,9 @@
 import type { NextPage } from "next";
 
+import CarList from "@components/home-page/car-list";
+
 const Home: NextPage = () => {
-  return (
-    <div>
-      <h1>HomePage</h1>
-    </div>
-  );
+  return <CarList />;
 };
 
 export default Home;
