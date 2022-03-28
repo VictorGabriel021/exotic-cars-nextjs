@@ -80,22 +80,3 @@ export const SignUp = styled.p<{ color: string; colorHover: string }>`
     font-size: 12px;
   }
 `;
-
-export const SignIn = styled.button<{ color: string }>`
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  color: ${({ color }) => color};
-  border: 1px solid ${({ color }) => color};
-  border-radius: 12px;
-  padding: 8px 15px;
-
-  &:hover {
-    color: #fff;
-    background-color: ${({ color }) => color};
-  }
-
-  @media (max-width: 500px) {
-    font-size: 12px;
-  }
-`;

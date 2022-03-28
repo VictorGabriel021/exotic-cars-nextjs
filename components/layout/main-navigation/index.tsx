@@ -7,12 +7,13 @@ import {
   NormalText,
   SearchBackground,
   SignUp,
-  SignIn,
 } from "./styles";
 
 import Link from "next/link";
 
 import { IoLocationSharp, IoCalendarSharp, IoSearch } from "react-icons/io5";
+
+import Button from "@components/ui/button";
 
 import { Colors } from "@constants/index";
 
@@ -49,7 +50,7 @@ const MainNavigation = () => {
         <SignUp color={Colors.primary} colorHover={Colors.primaryHover}>
           Sign up
         </SignUp>
-        <SignIn color={Colors.primary}>Sign in</SignIn>
+        <Button color={Colors.primary} text="Sign in" />
       </DFlex>
     </Header>
   );
