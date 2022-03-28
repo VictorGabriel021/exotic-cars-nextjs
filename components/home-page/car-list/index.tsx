@@ -6,6 +6,10 @@ import { CarItem, ScrollTopSvg } from "@components/index";
 
 import { Colors } from "@constants/index";
 
+import cars from "@data/cars.json";
+
+import { ICarsResponse } from "@interfaces/carInterfaces";
+
 const CarList = () => {
   const [isDisplay, setIsDisplay] = useState(false);
 
@@ -29,17 +33,10 @@ const CarList = () => {
   return (
     <Container>
       <Content>
-        <CarItem />
-        <CarItem />
-        <CarItem />
-        <CarItem />
-        <CarItem />
-        <CarItem />
-        <CarItem />
-        <CarItem />
-        <CarItem />
-        <CarItem />
-        <CarItem />
+        {cars.map((car: ICarsResponse) => {
+          const { id } = car;
+          return <CarItem key={id} carData={car} />;
+        })}
       </Content>
 
       {isDisplay && (

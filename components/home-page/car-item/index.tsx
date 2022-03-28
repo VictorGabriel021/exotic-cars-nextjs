@@ -14,24 +14,28 @@ import Image from "next/image";
 
 import { HiDotsHorizontal } from "react-icons/hi";
 
-const CarItem = () => {
+import { ICarsResponse } from "@interfaces/carInterfaces";
+
+const CarItem: React.FC<{ carData: ICarsResponse }> = (props) => {
+  const { id, brand, model, price, imageShowcase } = props.carData;
+
   return (
     <Card>
       <DFlex>
         <div>
-          <TextBold>Porsche</TextBold>
-          <TextUppercase>911 Turbo S</TextUppercase>
+          <TextBold>{brand}</TextBold>
+          <TextUppercase>{model}</TextUppercase>
         </div>
         <HiDotsHorizontal size={24} color="#C8C8CA" />
       </DFlex>
 
-      <Image src="/images/porsche.svg" alt="nani" height={105} width={260} />
+      <Image src={imageShowcase} alt={brand} height={105} width={260} />
 
       <DFlexPrice>
         <WhiteText>Book Now</WhiteText>
         <DFlex>
           <TextDollar>$</TextDollar>
-          <TextMoney>725</TextMoney>
+          <TextMoney>{price}</TextMoney>
           <TextPerDay>/day</TextPerDay>
         </DFlex>
       </DFlexPrice>

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "01",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Red",
+        "image": "/images/ferrari-red.svg"
+      },
+      {
+        "id": "02",
+        "color": "Yellow",
+        "image": "/images/ferrari-yellow.svg"
+      },
+      {
+        "id": "03",
+        "color": "Gray",
+        "image": "/images/ferrari-gray.svg"
+      }
+    ],
+    "brand": "Ferrari",
+    "model": "California",
+    "price": 725,
+    "imageShowcase": "/images/ferrari.svg",
+    "brandLogo": "/images/logo-ferrari.svg"
+  },
+  {
+    "id": "02",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Dark Blue",
+        "image": "/images/bentley-dark-blue.svg"
+      }
+    ],
+    "brand": "Bentley",
+    "model": "CONTINENTAL GT",
+    "price": 825,
+    "imageShowcase": "/images/bentley.svg",
+    "brandLogo": "/images/logo-bentley.svg"
+  },
+  {
+    "id": "03",
+    "cars": [
+      {
+        "id": "01",
+        "color": "White",
+        "image": "/images/bmw-white.svg"
+      }
+    ],
+    "brand": "BMW",
+    "model": "M1 COMPETITION",
+    "price": 825,
+    "imageShowcase": "/images/bmw.svg",
+    "brandLogo": "/images/logo-bmw.svg"
+  },
+  {
+    "id": "04",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Yellow",
+        "image": "/images/alfa-romeo-yellow.svg"
+      }
+    ],
+    "brand": "Alfa Romeo",
+    "model": "4C SPIDER",
+    "price": 825,
+    "imageShowcase": "/images/alfa-romeo.svg",
+    "brandLogo": "/images/logo-alfa-romeo.svg"
+  },
+  {
+    "id": "05",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Silver",
+        "image": "/images/mercedes-benz-silver.svg"
+      }
+    ],
+    "brand": "Mercedes-benz",
+    "model": "AMG GTS",
+    "price": 725,
+    "imageShowcase": "/images/mercedes-benz.svg",
+    "brandLogo": "/images/logo-mercedes-benz.svg"
+  },
+  {
+    "id": "06",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Orange",
+        "image": "/images/porsche-orange.svg"
+      }
+    ],
+    "brand": "Porsche",
+    "model": "911 TURBO S",
+    "price": 725,
+    "imageShowcase": "/images/porsche.svg",
+    "brandLogo": "/images/logo-porsche.svg"
+  },
+  {
+    "id": "07",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Black",
+        "image": "/images/chevrolet-black.svg"
+      }
+    ],
+    "brand": "Chevrolet",
+    "model": "CORVETT",
+    "price": 925,
+    "imageShowcase": "/images/chevrolet.svg",
+    "brandLogo": "/images/logo-chevrolet.svg"
+  },
+  {
+    "id": "08",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Red",
+        "image": "/images/rolls-royce-red.svg"
+      }
+    ],
+    "brand": "Rolls-Royce",
+    "model": "WRAITH",
+    "price": 725,
+    "imageShowcase": "/images/rolls-royce.svg",
+    "brandLogo": "/images/logo-rolls-royce.svg"
+  },
+  {
+    "id": "09",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Orange",
+        "image": "/images/mclaren-orange.svg"
+      }
+    ],
+    "brand": "Mclaren",
+    "model": "P1 GTR",
+    "price": 925,
+    "imageShowcase": "/images/mclaren.svg",
+    "brandLogo": "/images/logo-mclaren.svg"
+  },
+  {
+    "id": "10",
+    "cars": [
+      {
+        "id": "01",
+        "color": "White",
+        "image": "/images/lamborghini-white.svg"
+      },
+      {
+        "id": "02",
+        "color": "Green",
+        "image": "/images/lamborghini-green.svg"
+      },
+      {
+        "id": "03",
+        "color": "Gray",
+        "image": "/images/lamborghini-gray.svg"
+      }
+    ],
+    "brand": "Lamborghini",
+    "model": "AVENTADOR",
+    "price": 925,
+    "imageShowcase": "/images/lamborghini.svg",
+    "brandLogo": "/images/logo-lamborghini.svg"
+  },
+  {
+    "id": "11",
+    "cars": [
+      {
+        "id": "01",
+        "color": "Blue",
+        "image": "/images/bugatti-blue.svg"
+      },
+      {
+        "id": "02",
+        "color": "Black and White",
+        "image": "/images/bugatti-black-white.svg"
+      }
+    ],
+    "brand": "Bugatti",
+    "model": "VEYRON SPYDER",
+    "price": 925,
+    "imageShowcase": "/images/bugatti.svg",
+    "brandLogo": "/images/logo-bugatti.svg"
+  }
+]
