@@ -6,32 +6,32 @@ export const CustomButton = styled.button<{
   width?: number;
   fontWeight?: string;
   borderRadius?: number;
-  hasInitialBackgroundColor?: boolean;
+  isOutLine?: boolean;
 }>`
-  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "bold")};
-
-  background-color: ${({ hasInitialBackgroundColor, color }) =>
-    hasInitialBackgroundColor ? color : "transparent"};
-
-  color: ${({ hasInitialBackgroundColor, color }) =>
-    hasInitialBackgroundColor ? "#fff" : color};
-
-  width: auto;
-  min-width: ${({ width }) => width}px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: auto;
   font-size: 16px;
+  padding: 8px 15px;
+
+  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "bold")};
+  
+  background-color: ${({ isOutLine, color }) =>
+    isOutLine ? "transparent" : color};
+  
+  color: ${({ isOutLine, color }) => (isOutLine ? color : "#fff")};
+  min-width: ${({ width }) => width}px;
   border: 1px solid ${({ color }) => color};
   border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : 12)}px;
-  padding: 8px 15px;
 
   &:hover {
     color: #fff;
-    background-color: ${({ hasInitialBackgroundColor, color, colorHover }) =>
-      hasInitialBackgroundColor ? colorHover : color};
-    border-color: ${({ colorHover }) => colorHover};
+    background-color: ${({ isOutLine, color, colorHover }) =>
+      isOutLine ? color : colorHover};
+    border-color: ${({ isOutLine, color, colorHover }) =>
+      isOutLine ? color : colorHover};
   }
 
   @media (max-width: 500px) {

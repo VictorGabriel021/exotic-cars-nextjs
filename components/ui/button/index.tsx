@@ -4,12 +4,9 @@ const Button: React.FC<{
   color: string;
   colorHover?: string;
   width?: number;
-  text: string;
   fontWeight?: string;
   borderRadius?: number;
-  hasInitialBackgroundColor?: boolean;
-  hasArrowRight?: boolean;
-  hasArrowLeft?: boolean;
+  isOutLine?: boolean;
   onClick?: () => void;
 }> = (props) => {
   const {
@@ -17,32 +14,11 @@ const Button: React.FC<{
     color,
     colorHover,
     width,
-    text,
     fontWeight,
     borderRadius,
-    hasInitialBackgroundColor,
-    hasArrowRight,
-    hasArrowLeft,
+    isOutLine,
     onClick,
   } = props;
-
-  let content: any = text;
-
-  if (hasArrowRight) {
-    content = (
-      <>
-        {text} {children}
-      </>
-    );
-  }
-
-  if (hasArrowLeft) {
-    content = (
-      <>
-        {children} {text}
-      </>
-    );
-  }
 
   return (
     <CustomButton
@@ -52,9 +28,9 @@ const Button: React.FC<{
       width={width}
       fontWeight={fontWeight}
       borderRadius={borderRadius}
-      hasInitialBackgroundColor={hasInitialBackgroundColor}
+      isOutLine={isOutLine}
     >
-      {content}
+      {children}
     </CustomButton>
   );
 };

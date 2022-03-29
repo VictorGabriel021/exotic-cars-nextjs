@@ -7,6 +7,14 @@ export const Header = styled.header`
   height: 85px;
 `;
 
+export const WrapperLink = styled.a<{ color: string }>`
+  align-self: center;
+
+  &:hover {
+    color: ${({ color }) => color};
+  }
+`;
+
 export const DFlex = styled.div`
   display: flex;
   align-items: center;

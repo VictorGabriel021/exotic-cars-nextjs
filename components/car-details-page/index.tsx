@@ -12,11 +12,11 @@ import Image from "next/image";
 
 import { useRouter } from "next/router";
 
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+
 import Button from "@components/ui/button";
 
 import { Colors } from "@constants/index";
-
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const CarDetails = () => {
   const { push } = useRouter();
@@ -44,13 +44,12 @@ const CarDetails = () => {
         <Button
           color={Colors.secondary}
           width={170}
-          text="Back to catalog"
           fontWeight="300"
           borderRadius={50}
-          hasArrowLeft
+          isOutLine
           onClick={backToCatalogHandler}
         >
-          <BsArrowLeft size={22} style={{ marginRight: 10 }} />
+          <BsArrowLeft size={22} style={{ marginRight: 10 }} /> Back to catalog
         </Button>
         <Image
           src="/images/ferrariR@2x.png"
@@ -70,13 +69,10 @@ const CarDetails = () => {
           color={Colors.secondary}
           colorHover={Colors.secondaryHover}
           width={170}
-          text="Book now"
           fontWeight="300"
           borderRadius={50}
-          hasInitialBackgroundColor
-          hasArrowRight
         >
-          <BsArrowRight size={22} style={{ marginLeft: 10 }} />
+          Book now <BsArrowRight size={22} style={{ marginLeft: 10 }} />
         </Button>
       </DFlexCenter>
     </Container>
