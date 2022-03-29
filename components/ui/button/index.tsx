@@ -8,18 +8,16 @@ const Button: React.FC<{
   borderRadius?: number;
   isOutLine?: boolean;
   onClick?: () => void;
-}> = (props) => {
-  const {
-    children,
-    color,
-    colorHover,
-    width,
-    fontWeight,
-    borderRadius,
-    isOutLine,
-    onClick,
-  } = props;
-
+}> = ({
+  children,
+  color,
+  colorHover,
+  width,
+  fontWeight,
+  borderRadius,
+  isOutLine,
+  onClick,
+}) => {
   return (
     <CustomButton
       onClick={onClick}

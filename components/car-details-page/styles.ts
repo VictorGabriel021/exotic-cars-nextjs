@@ -10,6 +10,10 @@ export const Container = styled.div`
   }
 `;
 
+export const CarInfo = styled.div`
+  margin-left: 15px;
+`;
+
 export const DFlex = styled.div`
   display: flex;
   align-items: center;
@@ -53,6 +57,7 @@ export const TextNormal = styled.p`
 
 export const AlignBaseline = styled.div`
   align-self: baseline;
+  text-align: center;
 
   @media (max-width: 1023px) {
     align-self: center;

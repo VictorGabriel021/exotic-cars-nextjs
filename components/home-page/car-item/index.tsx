@@ -18,8 +18,8 @@ import { HiDotsHorizontal } from "react-icons/hi";
 
 import { ICarsResponse } from "@interfaces/carInterfaces";
 
-const CarItem: React.FC<{ carData: ICarsResponse }> = (props) => {
-  const { id, brand, model, price, imageShowcase } = props.carData;
+const CarItem: React.FC<{ carData: ICarsResponse }> = ({ carData }) => {
+  const { id, brand, model, price, imageShowcase } = carData;
 
   const { push } = useRouter();
 

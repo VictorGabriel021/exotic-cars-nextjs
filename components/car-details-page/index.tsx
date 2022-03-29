@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 import {
   Container,
+  CarInfo,
   DFlex,
   TextBold,
   TextNormal,
@@ -18,8 +21,13 @@ import Button from "@components/ui/button";
 
 import { Colors } from "@constants/index";
 
-const CarDetails = () => {
+import { ICarsResponse } from "@interfaces/carInterfaces";
+
+const CarDetails: React.FC<{ carItem: ICarsResponse }> = ({ carItem }) => {
+  const { brand, model, brandLogo, price, cars } = carItem;
   const { push } = useRouter();
+
+  const [carSelected, setCarSelected] = useState(cars[0]);
 
   const backToCatalogHandler = () => {
     push("/");
@@ -29,15 +37,17 @@ const CarDetails = () => {
     <Container>
       <DFlex>
         <Image
-          src="/images/logo-ferrari.svg"
-          alt="logo"
+          src={brandLogo}
+          alt={`${brand} ${model}`}
           width={140}
           height={110}
         />
-        <div>
-          <TextBold>Ferrari California</TextBold>
-          <TextNormal>$725/day</TextNormal>
-        </div>
+        <CarInfo>
+          <TextBold>
+            {brand} {model}
+          </TextBold>
+          <TextNormal>${price}/day</TextNormal>
+        </CarInfo>
       </DFlex>
 
       <DFlexAround>
@@ -52,15 +62,15 @@ const CarDetails = () => {
           <BsArrowLeft size={22} style={{ marginRight: 10 }} /> Back to catalog
         </Button>
         <Image
-          src="/images/ferrariR@2x.png"
-          alt="logo"
+          src={carSelected.image}
+          alt={`${brand} ${model} ${carSelected.color}`}
           width={700}
           height={350}
         />
 
         <AlignBaseline>
-          <TextBold>01</TextBold>
-          <TextNormal>Red</TextNormal>
+          <TextBold>{carSelected.id}</TextBold>
+          <TextNormal>{carSelected.color}</TextNormal>
         </AlignBaseline>
       </DFlexAround>
 

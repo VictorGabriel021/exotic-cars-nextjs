@@ -1,5 +1,7 @@
+import CarList from "@components/home-page/car-list";
+
 import CarItem from "@components/home-page/car-item";
 
-import ScrollTopSvg from "@components/svgs/scroll-top";
+import ScrollTop from "@components/ui/scrollTop";
 
-export { CarItem, ScrollTopSvg };
+export { CarList, CarItem, ScrollTop };

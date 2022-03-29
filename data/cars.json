@@ -5,17 +5,17 @@
       {
         "id": "01",
         "color": "Red",
-        "image": "/images/ferrari-red.svg"
+        "image": "/images/ferrariR@2x.png"
       },
       {
         "id": "02",
         "color": "Yellow",
-        "image": "/images/ferrari-yellow.svg"
+        "image": "/images/ferrariY@2x.png"
       },
       {
         "id": "03",
         "color": "Gray",
-        "image": "/images/ferrari-gray.svg"
+        "image": "/images/ferrariG@2x.png"
       }
     ],
     "brand": "Ferrari",

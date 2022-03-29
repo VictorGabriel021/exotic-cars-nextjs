@@ -1,10 +1,10 @@
 import MainNavigation from "@components/layout/main-navigation";
 
-const Layout: React.FC = (props) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <>
       <MainNavigation />
-      {props.children}
+      {children}
     </>
   );
 };
