@@ -16,9 +16,9 @@ const HomePage: NextPage<{ cars: ICarsResponse[] }> = ({ cars }) => {
   const handleScroll = () => {
     if (window.scrollY > 200) {
       setIsDisplay(true);
-      return;
+    } else {
+      setIsDisplay(false);
     }
-    setIsDisplay(false);
   };
 
   const scrollTopHandler = () => {
@@ -28,7 +28,7 @@ const HomePage: NextPage<{ cars: ICarsResponse[] }> = ({ cars }) => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [cars]);
+  }, []);
 
   return (
     <Container>
