@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import {
   Container,
@@ -17,18 +17,18 @@ import { useRouter } from "next/router";
 
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
-import Button from "@components/ui/button";
+import { Button, Carousel } from "@components/index";
 
 import { Colors } from "@constants/index";
 
-import { ICarsResponse } from "@interfaces/carInterfaces";
-import Carousel from "@components/carousel";
+import { ICars, ICarsResponse } from "@interfaces/carInterfaces";
 
 const CarDetails: React.FC<{ carItem: ICarsResponse }> = ({ carItem }) => {
   const { brand, model, brandLogo, price, cars } = carItem;
   const { push } = useRouter();
 
-  const [carSelected, setCarSelected] = useState(cars[0]);
+  const [carSelected, setCarSelected] = useState<ICars>(cars[0]);
+  const [width, setWidth] = useState(0);
 
   const backToCatalogHandler = () => {
     push("/");
@@ -37,6 +37,18 @@ const CarDetails: React.FC<{ carItem: ICarsResponse }> = ({ carItem }) => {
   const onChangeImageHandler = (imageIndex: number) => {
     setCarSelected(cars[imageIndex]);
   };
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    handleResize();
+    setCarSelected(cars[0]);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [cars]);
 
   return (
     <Container>
@@ -91,7 +103,11 @@ const CarDetails: React.FC<{ carItem: ICarsResponse }> = ({ carItem }) => {
         </Button>
       </DFlexCenter>
 
-      <Carousel onChangeImage={onChangeImageHandler} cars={cars} />
+      <Carousel
+        onChangeImage={onChangeImageHandler}
+        cars={cars}
+        windowWidth={width}
+      />
     </Container>
   );
 };

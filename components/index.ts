@@ -4,4 +4,8 @@ import CarItem from "@components/home-page/car-item";
 
 import ScrollTop from "@components/ui/scrollTop";
 
-export { CarList, CarItem, ScrollTop };
+import Button from "@components/ui/button";
+
+import Carousel from "@components/carousel";
+
+export { CarList, CarItem, ScrollTop, Button, Carousel };

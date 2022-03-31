@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,20 +17,9 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 const Carousel: React.FC<{
   cars: ICars[];
   onChangeImage: (index: number) => void;
-}> = ({ cars, onChangeImage }) => {
+  windowWidth: number;
+}> = ({ cars, onChangeImage, windowWidth }) => {
   const [swiper, setSwiper] = useState<SwiperCore>();
-  const [width, setWidth] = useState(0);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const prevHandler = () => {
     swiper!.slidePrev();
@@ -44,6 +33,15 @@ const Carousel: React.FC<{
     onChangeImage(imageIndex);
   };
 
+  const getActiveCardHandler = (index: number) => {
+    let active = index === swiper?.realIndex;
+
+    if (swiper && swiper.realIndex === cars.length && index === 0) {
+      active = true;
+    }
+    return active;
+  };
+
   return (
     <Container>
       <Content>
@@ -54,14 +52,15 @@ const Carousel: React.FC<{
         <Swiper
           loopAdditionalSlides={cars.length}
           spaceBetween={30}
-          slidesPerView={width < 768 ? 1 : cars.length}
+          slidesPerView={windowWidth < 768 ? 1 : cars.length}
           centeredSlides
           loop
           onInit={(swiper) => setSwiper(swiper)}
           onSlideChange={(swiper) => onSlideChangeHandler(swiper.realIndex)}
         >
           {cars.map(({ id, image }, index) => {
-            const active = index === swiper?.realIndex;
+            const active = getActiveCardHandler(index);
+
             return (
               <SwiperSlide key={id}>
                 <CardItem isActive={active}>

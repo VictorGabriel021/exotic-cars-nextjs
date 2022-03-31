@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 40px;
 
   @media (max-width: 600px) {
-    padding: 40px 5px;
+    padding: 40px 15px;
   }
 `;
 
@@ -42,7 +42,7 @@ export const TextBold = styled.p`
   font-weight: bold;
 
   @media (max-width: 768px) {
-    font-size: 35px;
+    font-size: 25px;
   }
 `;
 
@@ -51,11 +51,12 @@ export const TextNormal = styled.p`
   font-weight: 300;
 
   @media (max-width: 768px) {
-    font-size: 25px;
+    font-size: 16px;
   }
 `;
 
 export const AlignBaseline = styled.div`
+  width: 200px;
   align-self: baseline;
   text-align: center;
 

@@ -30,7 +30,7 @@
       {
         "id": "01",
         "color": "Dark Blue",
-        "image": "/images/bentley-dark-blue.svg"
+        "image": "/images/bentley-continentalB@2x.png"
       }
     ],
     "brand": "Bentley",
@@ -45,7 +45,7 @@
       {
         "id": "01",
         "color": "White",
-        "image": "/images/bmw-white.svg"
+        "image": "/images/bmwW@2x.png"
       }
     ],
     "brand": "BMW",
@@ -60,7 +60,7 @@
       {
         "id": "01",
         "color": "Yellow",
-        "image": "/images/alfa-romeo-yellow.svg"
+        "image": "/images/alfa-romeoY@2x.png"
       }
     ],
     "brand": "Alfa Romeo",
@@ -75,7 +75,7 @@
       {
         "id": "01",
         "color": "Silver",
-        "image": "/images/mercedes-benz-silver.svg"
+        "image": "/images/ferrariR@2x.png"
       }
     ],
     "brand": "Mercedes-benz",
@@ -90,7 +90,7 @@
       {
         "id": "01",
         "color": "Orange",
-        "image": "/images/porsche-orange.svg"
+        "image": "/images/porscheBlack.png"
       }
     ],
     "brand": "Porsche",
@@ -105,7 +105,7 @@
       {
         "id": "01",
         "color": "Black",
-        "image": "/images/chevrolet-black.svg"
+        "image": "/images/ferrariR@2x.png"
       }
     ],
     "brand": "Chevrolet",
@@ -120,7 +120,7 @@
       {
         "id": "01",
         "color": "Red",
-        "image": "/images/rolls-royce-red.svg"
+        "image": "/images/rolls_royceRed.png"
       }
     ],
     "brand": "Rolls-Royce",
@@ -135,7 +135,7 @@
       {
         "id": "01",
         "color": "Orange",
-        "image": "/images/mclaren-orange.svg"
+        "image": "/images/ferrariR@2x.png"
       }
     ],
     "brand": "Mclaren",
@@ -150,17 +150,17 @@
       {
         "id": "01",
         "color": "White",
-        "image": "/images/lamborghini-white.svg"
+        "image": "/images/lamborghiniWhite.png"
       },
       {
         "id": "02",
         "color": "Green",
-        "image": "/images/lamborghini-green.svg"
+        "image": "/images/lamborghiniGreen.png"
       },
       {
         "id": "03",
         "color": "Gray",
-        "image": "/images/lamborghini-gray.svg"
+        "image": "/images/lamborghiniGray.png"
       }
     ],
     "brand": "Lamborghini",
@@ -175,12 +175,12 @@
       {
         "id": "01",
         "color": "Blue",
-        "image": "/images/bugatti-blue.svg"
+        "image": "/images/bugattiWB@2x.png"
       },
       {
         "id": "02",
         "color": "Black and White",
-        "image": "/images/bugatti-black-white.svg"
+        "image": "/images/bugattiWB@2x.png"
       }
     ],
     "brand": "Bugatti",
